@@ -19,10 +19,12 @@ const Navbar = () => {
       </div>
       <div className={styles.links}>
         {navigation.map(({ id, title, path }) => (
-          <Link key={id} href={path}>
-            <div className={pathname === path ? styles.active : null}>
-              {title}
-            </div>
+          <Link
+            key={id}
+            href={path}
+            className={pathname === path ? styles.active : null}
+          >
+            {title}
           </Link>
         ))}
       </div>
